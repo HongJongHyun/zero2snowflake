@@ -82,24 +82,24 @@ CREATE OR REPLACE SCHEMA analytics ;
 USE ROLE securityadmin ;
 
 // harmonized 스키마에 대한 모든 권한 부여
-GRANT ALL ON SCHEMA tasty_db.harmonized TO ROLE tasty_data_engineer ;
-GRANT ALL ON SCHEMA tasty_db.harmonized TO ROLE tasty_dev ;
+GRANT ALL ON SCHEMA frostbyte_tasty_bytes.harmonized TO ROLE tasty_data_engineer ;
+GRANT ALL ON SCHEMA frostbyte_tasty_bytes.harmonized TO ROLE tasty_dev ;
 
 // analytics 스키마에 대한 모든 권한 부여
-GRANT ALL ON SCHEMA tasty_db.analytics TO ROLE tasty_data_engineer ;
-GRANT ALL ON SCHEMA tasty_db.analytics TO ROLE tasty_dev ;
+GRANT ALL ON SCHEMA frostbyte_tasty_bytes.analytics TO ROLE tasty_data_engineer ;
+GRANT ALL ON SCHEMA frostbyte_tasty_bytes.analytics TO ROLE tasty_dev ;
 
 // harmonized 스키마에 생성될 뷰에 대한 모든 권한 부여
-GRANT ALL ON FUTURE VIEWS IN SCHEMA tasty_db.harmonized TO ROLE tasty_data_engineer;
-GRANT ALL ON FUTURE VIEWS IN SCHEMA tasty_db.harmonized TO ROLE tasty_dev;
+GRANT ALL ON FUTURE VIEWS IN SCHEMA frostbyte_tasty_bytes.harmonized TO ROLE tasty_data_engineer;
+GRANT ALL ON FUTURE VIEWS IN SCHEMA frostbyte_tasty_bytes.harmonized TO ROLE tasty_dev;
 
 // analytics 스키마에 생성될 뷰에 대한 모든 권한 부여
-GRANT ALL ON FUTURE VIEWS IN SCHEMA tasty_db.analytics TO ROLE tasty_data_engineer;
-GRANT ALL ON FUTURE VIEWS IN SCHEMA tasty_db.analytics TO ROLE tasty_dev;
+GRANT ALL ON FUTURE VIEWS IN SCHEMA frostbyte_tasty_bytes.analytics TO ROLE tasty_data_engineer;
+GRANT ALL ON FUTURE VIEWS IN SCHEMA frostbyte_tasty_bytes.analytics TO ROLE tasty_dev;
 
 // analytics 스키마에 생성될 프로시저에 대한 모든 권한 부여
-GRANT USAGE ON FUTURE PROCEDURES IN SCHEMA tasty_db.analytics TO ROLE tasty_data_engineer;
-GRANT USAGE ON FUTURE PROCEDURES IN SCHEMA tasty_db.analytics TO ROLE tasty_dev;       
+GRANT USAGE ON FUTURE PROCEDURES IN SCHEMA frostbyte_tasty_bytes.analytics TO ROLE tasty_data_engineer;
+GRANT USAGE ON FUTURE PROCEDURES IN SCHEMA frostbyte_tasty_bytes.analytics TO ROLE tasty_dev;       
 
 // 뷰 생성을 위한 컨텍스트 설정
 USE ROLE sysadmin;
