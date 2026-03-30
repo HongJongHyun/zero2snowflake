@@ -32,28 +32,28 @@ SHOW ROLES LIKE 'tasty%' ;
 USE ROLE securityadmin ;
 
 // tasty_db에 대한 사용 권한
-GRANT USAGE ON DATABASE tasty_db TO ROLE tasty_data_engineer;
-GRANT USAGE ON DATABASE tasty_db TO ROLE tasty_dev;
+GRANT USAGE ON DATABASE frostbyte_tasty_bytes TO ROLE tasty_data_engineer;
+GRANT USAGE ON DATABASE frostbyte_tasty_bytes TO ROLE tasty_dev;
 
 // tasty_db의 모든 스키마에 대한 사용 권한
-GRANT USAGE ON ALL SCHEMAS IN DATABASE tasty_db TO ROLE tasty_data_engineer;
-GRANT USAGE ON ALL SCHEMAS IN DATABASE tasty_db TO ROLE tasty_dev;
+GRANT USAGE ON ALL SCHEMAS IN DATABASE frostbyte_tasty_bytes TO ROLE tasty_data_engineer;
+GRANT USAGE ON ALL SCHEMAS IN DATABASE frostbyte_tasty_bytes TO ROLE tasty_dev;
 
 // raw_pos 스키마에 대해 모든 권한
-GRANT ALL ON SCHEMA tasty_db.raw_pos TO ROLE tasty_data_engineer;
-GRANT ALL ON SCHEMA tasty_db.raw_pos TO ROLE tasty_dev;
+GRANT ALL ON SCHEMA frostbyte_tasty_bytes.raw_pos TO ROLE tasty_data_engineer;
+GRANT ALL ON SCHEMA frostbyte_tasty_bytes.raw_pos TO ROLE tasty_dev;
 
 // raw_customer 스키마에 대해 모든 권한
-GRANT ALL ON SCHEMA tasty_db.raw_customer TO ROLE tasty_data_engineer;
-GRANT ALL ON SCHEMA tasty_db.raw_customer TO ROLE tasty_dev;
+GRANT ALL ON SCHEMA frostbyte_tasty_bytes.raw_customer TO ROLE tasty_data_engineer;
+GRANT ALL ON SCHEMA frostbyte_tasty_bytes.raw_customer TO ROLE tasty_dev;
 
 // raw_pos 스키마 내의 전체 테이블에 대한 모든 권한
-GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA tasty_db.raw_pos TO ROLE tasty_data_engineer ;
-GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA tasty_db.raw_pos TO ROLE tasty_dev ;
+GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA frostbyte_tasty_bytes.raw_pos TO ROLE tasty_data_engineer ;
+GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA frostbyte_tasty_bytes.raw_pos TO ROLE tasty_dev ;
 
 // raw_customer 스키마 내의 전체 테이블에 대한 모든 권한
-GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA tasty_db.raw_customer TO ROLE tasty_data_engineer ;
-GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA tasty_db.raw_customer TO ROLE tasty_dev ;
+GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA frostbyte_tasty_bytes.raw_customer TO ROLE tasty_data_engineer ;
+GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA frostbyte_tasty_bytes.raw_customer TO ROLE tasty_dev ;
 
 // demo_build_wh
 GRANT ALL ON WAREHOUSE demo_build_wh TO ROLE sysadmin;
@@ -66,9 +66,9 @@ GRANT ALL ON WAREHOUSE tasty_dev_wh TO ROLE tasty_data_engineer;
 GRANT ALL ON WAREHOUSE tasty_dev_wh TO ROLE tasty_dev;
 
 // raw_pos 스키마에 생성될 향후 테이블
-GRANT ALL ON FUTURE TABLES IN SCHEMA tasty_db.raw_pos TO ROLE tasty_data_engineer;
-GRANT ALL ON FUTURE TABLES IN SCHEMA tasty_db.raw_pos TO ROLE tasty_dev;
+GRANT ALL ON FUTURE TABLES IN SCHEMA frostbyte_tasty_bytes.raw_pos TO ROLE tasty_data_engineer;
+GRANT ALL ON FUTURE TABLES IN SCHEMA frostbyte_tasty_bytes.raw_pos TO ROLE tasty_dev;
 
 // raw_customer 스키마에 생성될 향후 테이블
-GRANT ALL ON FUTURE TABLES IN SCHEMA tasty_db.raw_customer TO ROLE tasty_data_engineer;
-GRANT ALL ON FUTURE TABLES IN SCHEMA tasty_db.raw_customer TO ROLE tasty_dev;
+GRANT ALL ON FUTURE TABLES IN SCHEMA frostbyte_tasty_bytes.raw_customer TO ROLE tasty_data_engineer;
+GRANT ALL ON FUTURE TABLES IN SCHEMA frostbyte_tasty_bytes.raw_customer TO ROLE tasty_dev;
