@@ -61,7 +61,7 @@ USE WAREHOUSE tasty_de_wh;
 // order_v를 이용하여 데이터 조회
 SELECT o.date,
        SUM(o.price) AS daily_sales
-  FROM tasty_db.analytics.orders_v o
+  FROM frostbyte_tasty_bytes.analytics.orders_v o
  WHERE 1=1
    AND o.country = 'Germany'
    AND o.primary_city = 'Hamburg'
