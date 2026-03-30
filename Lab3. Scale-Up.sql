@@ -1,7 +1,7 @@
 // 컨텍스트 설정
 USE ROLE sysadmin ;
-USE WAREHOUSE frostbyte_tasty_bytes ;
-USE DATABASE tasty_db ;
+USE WAREHOUSE demo_build_wh ;
+USE DATABASE frostbyte_tasty_bytes ;
 USE SCHEMA raw_pos ;
 
 // order_header 테이블 생성
